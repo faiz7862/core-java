@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Objects",
+            "request": "launch",
+            "mainClass": "Objects",
+            "projectName": "java_72e8cc1b"
+        },
+        {
+            "type": "java",
+            "name": "Program1",
+            "request": "launch",
+            "mainClass": "Program1",
+            "projectName": "java_72e8cc1b"
+        },
+        {
+            "type": "java",
             "name": "DecimalToBinary",
             "request": "launch",
             "mainClass": "DecimalToBinary",
