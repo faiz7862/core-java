@@ -1,8 +1,0 @@
-{
-    "java.debug.settings.onBuildFailureProceed": true,
-    "chat.tools.terminal.autoApprove": {
-        "git add": true,
-        "git commit": true,
-        "git push": true
-    }
-}
