@@ -2,7 +2,7 @@
 public class This {
     int i=5;
     void setValue(int i){
-        i=i;
+        this.i=i;
     }
     void show(){
         System.out.println(i);
