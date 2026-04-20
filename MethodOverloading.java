@@ -13,11 +13,11 @@ public class MethodOverloading {
     }
 }
 
-class Overloading{
-    public static void main(String[] args){
-        MethodOverloading.main();
-        MethodOverloading.main(5);
-        String[] s = {"hello","hii","tata","bye"};
-        MethodOverloading.main(s);
-    }
-}
+//class Overloading{
+//    public static void main(String[] args){
+//        MethodOverloading.main();
+//        MethodOverloading.main(5);
+//        String[] s = {"hello","hii","tata","bye"};
+//        MethodOverloading.main(s);
+//    }
+//}
