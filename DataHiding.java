@@ -1,8 +1,8 @@
 public class DataHiding {
-    private int var;
-    public DataHiding(int var){
-        this.var = var;
-    }
+    private int var = 60;
+    // public DataHiding(int var){
+    //     this.var = var;
+    // }
     public int getVar(){
         // int newVar = var;
         return var;
@@ -15,7 +15,7 @@ public class DataHiding {
 
 class InnerDataHiding {
     public static void main(String[] args) {
-        DataHiding dh = new DataHiding(20);
+        DataHiding dh = new DataHiding();
         dh.setVar(50);
         System.out.println("The data value is: "+dh.getVar());
     }
