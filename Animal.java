@@ -1,39 +1,56 @@
 import java.util.Scanner;
 
-abstract public class Animal {
-    public abstract void sound();
-    public static void main(String[] args) {
-        System.out.println("1.Dog\n2.Cat\n3.Dog\4.Exit");
-        System.out.print("Enter your choice: ");
-        Scanner input = new Scanner(System.in);
-        int num = input.nextInt();
-        switch (num){
-            case(1):
-                new Dog().sound();
-                break;
-            case(2):
-                new Cat().sound();
-                break;
-            case(3):
-                new Lion().sound();
-                break;
-            case(4):
-                System.exit(0);
+class Animalapps{
+    public static void main(String[] args){
+        System.out.println("1.Dog\n 2.Cat\n 3.Lion\n");
+        Scanner sc = new Scanner(System.in);
+        int input = sc.nextInt();
+        AnimalFactory animalFactory = new AnimalFactory();
+        switch (input){
+            case 1:animalFactory.getanimalFactory("Dog").sound();
+            break;
+            case 2:animalFactory.getanimalFactory("Cat").sound();
+            break;
+            case 3:animalFactory.getanimalFactory("Lion").sound();
+            break;
+            case 4:System.exit(0);
+            default:
+                System.out.println("Invalid Input");
         }
     }
+
 }
-class Dog extends Animal {
-    public void sound() {
-        System.out.println("Bhou Bhou");
+
+class AnimalFactory{
+    public Animal getanimalFactory(String s){
+        Animal a = null;
+        if(s.equals("dog")){
+           a = new Dog();
+        }
+        else if(s.equals("cat")){
+            a = new Cat();
+        }
+        else{
+            a = new Lion();
+        }
+        return a;
     }
 }
-class Cat extends Animal{
-    public void sound() {
-        System.out.println("Meao Meao");
+public interface Animal{
+    void sound();
+}
+class Cat implements Animal{
+    public void sound(){
+        System.out.println("I am a cat");
     }
 }
-class Lion extends Animal{
-    public void sound() {
-        System.out.println("Roar");
+class Dog implements Animal{
+    public void sound(){
+        System.out.println("I am a dog");
+    }
+}
+class Lion implements Animal{
+    public void sound(){
+        System.out.println("I am a lion");
     }
 }
