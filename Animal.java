@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 class Animalapps{
     public static void main(String[] args){
-        System.out.println("1.Dog\n 2.Cat\n 3.Lion\n");
+        System.out.println("1.Dog\n2.Cat\n3.Lion\n4.Exit");
         Scanner sc = new Scanner(System.in);
         int input = sc.nextInt();
         AnimalFactory animalFactory = new AnimalFactory();
@@ -24,13 +24,13 @@ class Animalapps{
 class AnimalFactory{
     public Animal getanimalFactory(String s){
         Animal a = null;
-        if(s.equals("dog")){
+        if(s.equals("Dog")){
            a = new Dog();
         }
-        else if(s.equals("cat")){
+        else if(s.equals("Cat")){
             a = new Cat();
         }
-        else{
+        else if(s.equals("Lion")){
             a = new Lion();
         }
         return a;
@@ -41,16 +41,16 @@ public interface Animal{
 }
 class Cat implements Animal{
     public void sound(){
-        System.out.println("I am a cat");
+        System.out.println("I am a Cat");
     }
 }
 class Dog implements Animal{
     public void sound(){
-        System.out.println("I am a dog");
+        System.out.println("I am a Dog");
     }
 }
 class Lion implements Animal{
     public void sound(){
-        System.out.println("I am a lion");
+        System.out.println("I am a Lion");
     }
 }
