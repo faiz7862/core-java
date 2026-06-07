@@ -8,7 +8,7 @@ public class PrivateConstructor {
     }
 }
 
-class Main{
+class PrivateConstructorMain{
     public static void main(String[] args) {
         PrivateConstructor.getConstructor();
         PrivateConstructor.getConstructor();
